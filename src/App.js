@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import Navbar from './components/Navbar';
-import { BrowserRouter as Router, Routes, Route}
+import { BrowserRouter as Router, HashRouter ,Routes, Route}
 	from 'react-router-dom';
 import Home from './pages/home';
 import PoliciesNav from './pages/policies';
@@ -13,7 +13,7 @@ import PaymentNav from './pages/payment';
 
 function App() {
 return (
-	<Router>
+	<HashRouter>
 	<Navbar />
 	<Routes>
 		<Route exact path='/home' element={<Home />} />
@@ -22,7 +22,7 @@ return (
 		<Route path='/info' element={<RetrievePoliciesNav/>} />
 		<Route path='/status' element={<RetrieveStatusNav/>} />
 	</Routes>
-	</Router>
+	</HashRouter>
 );
 }
 
